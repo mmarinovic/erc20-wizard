@@ -1,0 +1,21 @@
+{
+  "name": "eth-erc20-token-factory",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "rinkeby-deploy": "node index.js --network rinkeby",
+    "main-deploy": "node index.js --network main"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "command-line-args": "^5.0.2",
+    "ethereumjs-tx": "^1.3.6",
+    "prompt": "^1.0.0",
+    "solc": "^0.4.24",
+    "truffle-privatekey-provider": "^0.1.0",
+    "web3": "^1.0.0-beta.34"
+  }
+}
