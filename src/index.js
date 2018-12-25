@@ -12,7 +12,7 @@ const options = commandLineArgs([{ name: 'network', type: String, defaultOption:
 function createWeb3Provider(networkType, privateKey){
     switch(networkType){
         case 'main':
-            return new PrivateKeyProvider(privateKey, 'https://main.infura.io')
+            return new PrivateKeyProvider(privateKey, 'https://mainnet.infura.io')
         case 'rinkeby':
             return new PrivateKeyProvider(privateKey, 'https://rinkeby.infura.io');
         default:
