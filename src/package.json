@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "rinkeby-deploy": "node index.js --network rinkeby",
+    "ropsten-deploy": "node index.js --network ropsten",
     "main-deploy": "node index.js --network main"
   },
-  "author": "",
+  "author": "mmarinovic",
   "license": "ISC",
   "dependencies": {
     "command-line-args": "^5.0.2",

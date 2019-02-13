@@ -15,6 +15,8 @@ function createWeb3Provider(networkType, privateKey){
             return new PrivateKeyProvider(privateKey, 'https://main.infura.io')
         case 'rinkeby':
             return new PrivateKeyProvider(privateKey, 'https://rinkeby.infura.io');
+        case 'ropsten':
+            return new PrivateKeyProvider(privateKey, 'https://ropsten.infura.io');
         default:
             throw 'Network not supported';
     }
@@ -27,7 +29,7 @@ deployContract = async (network, privateKey, name, symbol, decimals, totalSupply
     const source = fs.readFileSync(contractPath, 'utf8');
     const preparedSource = source.replace('Erc20TokenNamePlaceholder', name);
     const compiledContract = solc.compile(preparedSource, 1).contracts[':'+name];
-
+console.log(compiledContract)
     const accounts = await web3.eth.getAccounts();
 
     console.log('Deploying contract to ' + network + ' from account', accounts[0]);
@@ -43,7 +45,7 @@ prompt.start();
 
 const promptItems = [
     { description: 'Please enter your private key. This will be used to sign contract transaction.', name: 'privateKey', required: true,  hidden: true }, 
-    { description: 'Token name', name: 'tokenName', pattern: /^[a-zA-Z]+$/, required: true },
+    { description: 'Token name', name: 'tokenName', pattern: /^[a-zA-Z ]+$/, required: true },
     { description: 'Token symbol', name: 'tokenSymbol', pattern: /^[a-zA-Z]+$/, required: true },
     { description: 'Token decimal places', name: 'tokenDecimals', pattern: /^[0-9]+$/, required: true },
     { description: 'Token total supply', name: 'tokenTotalSupply', pattern: /^[0-9]+$/, required: true }
