@@ -2,7 +2,7 @@
 Easily create and deploy new tokens on ethereum
 
 Steps:
-1. Run npm run rinkeby-deploy or npm run main-deploy
+1. Run yarn deploy:rinkeby, yarn deploy:ropsten or yarn deploy:main
 2. Insert your private key. It will be used to unlock account which will be a token owner.
 3. Insert informations about your token
 

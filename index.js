@@ -2,7 +2,6 @@ const prompt = require('prompt');
 const fs = require('fs');
 const path = require('path');
 const solc = require('solc');
-const EthereumTx = require('ethereumjs-tx');
 const Web3 = require('web3');
 const PrivateKeyProvider = require('truffle-privatekey-provider');
 const commandLineArgs = require('command-line-args');
@@ -29,7 +28,6 @@ deployContract = async (network, privateKey, name, symbol, decimals, totalSupply
     const source = fs.readFileSync(contractPath, 'utf8');
     const preparedSource = source.replace('Erc20TokenNamePlaceholder', name);
     const compiledContract = solc.compile(preparedSource, 1).contracts[':'+name];
-console.log(compiledContract)
     const accounts = await web3.eth.getAccounts();
 
     console.log('Deploying contract to ' + network + ' from account', accounts[0]);
