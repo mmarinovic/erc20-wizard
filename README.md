@@ -1,8 +1,11 @@
 # Ethereum ERC 20 Token Factory
-Easily create and deploy new tokens on ethereum
+Easily create and deploy new tokens on ethereum. Make sure you have some funds on your account since deploying a contract costs ether.
 
-Steps:
-1. Run yarn deploy:rinkeby, yarn deploy:ropsten or yarn deploy:main
+## Configuration
+Infura requires a project ID to access the network. I added my ID to the `./config.json`, but requests are limited. Change that to fit your needs.
+
+## Steps:
+1. Run `yarn deploy:rinkeby`, `yarn deploy:ropsten` or `yarn deploy:main`
 2. Insert your private key. It will be used to unlock account which will be a token owner.
 3. Insert informations about your token
 

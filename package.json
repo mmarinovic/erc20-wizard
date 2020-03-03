@@ -1,12 +1,12 @@
 {
   "name": "eth-erc20-token-factory",
   "version": "1.0.1",
-  "description": "",
-  "main": "index.js",
+  "description": "Simple tool for deploying ERC20 tokens",
+  "main": "src/index.js",
   "scripts": {
-    "deploy:rinkeby": "node index.js --network rinkeby",
-    "deploy:ropsten": "node index.js --network ropsten",
-    "deploy:main": "node index.js --network main"
+    "deploy:rinkeby": "node src/index.js --network rinkeby",
+    "deploy:ropsten": "node src/index.js --network ropsten",
+    "deploy:main": "node src/index.js --network main"
   },
   "author": "mmarinovic",
   "license": "ISC",
@@ -15,6 +15,6 @@
     "prompt": "^1.0.0",
     "solc": "0.4.25",
     "truffle-privatekey-provider": "^1.3.0",
-    "web3": "^1.2.1"
+    "web3": "^1.2.6"
   }
 }
