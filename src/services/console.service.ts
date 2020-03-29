@@ -60,6 +60,6 @@ export class ConsoleService {
   }
 
   stopSpinner() {
-    this.spinner && this.spinner.stop();
+    this.spinner && this.spinner.stop(true);
   }
 }
