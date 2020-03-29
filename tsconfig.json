@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+      "target": "es2015",
+      "module": "commonjs",
+      "sourceMap": false,
+      "declaration": false,
+      "rootDir": "./src",
+      "outDir": "./dist/",
+      "strict": true,
+      "noImplicitAny": false,
+      "strictNullChecks": false,
+      "resolveJsonModule": true,
+      "esModuleInterop": true
+    },
+    "include": ["src", "config.json"],
+    "exclude": [
+      "node_modules",
+      "dist"
+    ]
+}
