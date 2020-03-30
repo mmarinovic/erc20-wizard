@@ -6,10 +6,6 @@ import { IPromptResult } from '../interfaces/prompt-result';
 export class ConsoleService {
   spinner: Spinner;
 
-  constructor() {
-    this.spinner = new Spinner();
-  }
-
   promptItems = [
     {
       description: colors.magenta(
@@ -44,6 +40,10 @@ export class ConsoleService {
       required: true,
     },
   ];
+
+  constructor() {
+    this.spinner = new Spinner();
+  }
 
   initPrompt(callback: (result: IPromptResult) => void) {
     this.spinner = new Spinner();

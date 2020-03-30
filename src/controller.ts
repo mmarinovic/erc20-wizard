@@ -51,7 +51,6 @@ export class Controller {
     this.consoleService.stopSpinner();
 
     this.handleResult(tokenName, result);
-
     process.exit();
   }
 
