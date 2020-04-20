@@ -1,5 +1,5 @@
 # Ethereum ERC 20 Token Factory
-Create and deploy new tokens on Ethereum network. Make sure you have some funds on your account since deploying a contract costs ether.
+Create and deploy new tokens on Ethereum network. Make sure you have some funds in your ethereum wallet since deploying a contract costs ether.
 
 ## Configuration
 Infura requires a project ID to access the network. I added my ID to the `./config.json`, but requests are limited. Change that to fit your needs.
