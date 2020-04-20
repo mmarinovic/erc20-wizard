@@ -7,7 +7,7 @@ Infura requires a project ID to access the network. I added my ID to the `./conf
 ## Steps:
 1. Run `yarn deploy:rinkeby`, `yarn deploy:ropsten` or `yarn deploy:main`
 2. Insert your private key. It will be used to unlock account which will be a token owner.
-3. Insert informations about your token
+3. Insert information about your token
 
 ```javascript
 prompt: Please enter your private key. This will be used to sign contract transaction.:
