@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`cli cliMessages matches a snapshot 1`] = `
+Object {
+  "configDisplay": [Function],
+  "configureSuccess": "🚀 Sucessfully configured",
+  "deploying": "🔥 Deploying 🔥",
+  "deploymentError": [Function],
+  "deploymentSuccess": [Function],
+  "help": "
+  --help                            Print help
+  --config=infuraProjectId          Configure factory to use 'infuraProjectId' when connecting to infura API. Get it at https://infura.io/.
+  --main                            Start contract creation for Ethereum main network
+  --rinkeby                         Start contract creation for Ethereum rinkeby testnet
+  --ropsten                         Start contract creation for Ethereum ropsten testnet
+  ",
+  "invalidProjectId": "[31m❌ Invalid Infura project id[39m",
+  "notConfigured": "[31m❌ CLI is not configured yet. Use --config to setup your infura project id. Get your project id at https://infura.io/[39m",
+  "welcome": "🏭  Welcome to Ethereum ERC20 token factory! 🏭",
+}
+`;
+
+exports[`cli cliOptions matches a snapshot 1`] = `
+Object {
+  "boolean": Array [
+    "help",
+  ],
+  "string": Array [
+    "config",
+    "network",
+  ],
+}
+`;
+
+exports[`cli cliPromptOptions matches a snapshot 1`] = `
+Array [
+  Object {
+    "description": "[35mPlease enter your private key. This will be used to sign contract transaction.[39m",
+    "hidden": true,
+    "name": "privateKey",
+    "required": true,
+  },
+  Object {
+    "description": "Token name",
+    "name": "tokenName",
+    "pattern": /\\^\\[a-zA-Z \\]\\+\\$/,
+    "required": true,
+  },
+  Object {
+    "description": "Token symbol",
+    "name": "tokenSymbol",
+    "pattern": /\\^\\[a-zA-Z\\]\\+\\$/,
+    "required": true,
+  },
+  Object {
+    "description": "Token decimal places",
+    "name": "tokenDecimals",
+    "pattern": /\\^\\[0-9\\]\\+\\$/,
+    "required": true,
+  },
+  Object {
+    "description": "Token total supply",
+    "name": "tokenTotalSupply",
+    "pattern": /\\^\\[0-9\\]\\+\\$/,
+    "required": true,
+  },
+]
+`;

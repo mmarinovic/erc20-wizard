@@ -75,3 +75,4 @@ const cliMessages = {
 };
 
 export { cliPromptOptions, cliOptions, cliMessages, errorMessageTemplate };
+export { cliPromptOptions, cliOptions, cliMessages, errorMessageTemplate };
