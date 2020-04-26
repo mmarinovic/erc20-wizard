@@ -10,10 +10,11 @@
       "no-else-after-return": false,
       "variable-name": [true, "ban-keywords", "check-format", "allow-pascal-case"],
       "interface-name": [true, "always-prefix"],
-      "no-any": true,
+      "no-any": false,
       "max-union-size": false,
       "object-literal-sort-keys": false,
       "ordered-imports": false,
-      "member-ordering": false
+      "member-ordering": false,
+      "no-console": false
     }
   }

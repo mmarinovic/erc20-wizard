@@ -1,4 +1,4 @@
 import { ConfigurationService } from '../services/configuration.service';
 
-var configuration = new ConfigurationService();
+const configuration = new ConfigurationService();
 configuration.clear();

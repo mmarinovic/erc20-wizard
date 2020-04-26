@@ -27,7 +27,9 @@ export class ConsoleService {
   }
 
   stopSpinner() {
-    this.spinner && this.spinner.stop(true);
+    if (this.spinner) {
+      this.spinner.stop(true);
+    }
   }
 
   getArgs(processArgs: string[]): ICliArgs {

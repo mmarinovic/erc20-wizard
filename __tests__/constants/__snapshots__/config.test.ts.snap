@@ -1,8 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`configKeys matches a snapshot 1`] = `
-Object {
-  "configProjectName": "eth-erc20-token-factory",
-  "infuraProjectId": "infuraProjectId",
-}
-`;

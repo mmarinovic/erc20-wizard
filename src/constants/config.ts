@@ -1,5 +1,5 @@
 const configKeys = {
-  configProjectName: 'eth-erc20-token-factory',
+  configProjectName: 'erc20-wizard',
   infuraProjectId: 'infuraProjectId',
 };
 

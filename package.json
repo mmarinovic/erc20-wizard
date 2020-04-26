@@ -1,13 +1,16 @@
 {
-  "name": "eth-erc20-token-factory",
+  "name": "erc20-wizard",
   "version": "1.0.0",
   "description": "CLI for creating and deploying Ethereum ERC20 tokens",
   "main": "lib/index.js",
-  "bin": "lib/cli.js",
+  "bin": {
+    "erc20-wizard": "lib/cli.js"
+  },
   "scripts": {
     "build": "gulp",
     "start": "ts-node ./src/cli.ts",
     "test": "jest",
+    "lint": "tslint --project tsconfig.json",
     "preuninstall": "node lib/scripts/pre-uninstall.js"
   },
   "author": {
@@ -24,7 +27,8 @@
     "tool",
     "cli",
     "infura",
-    "ico"
+    "ico",
+    "wizard"
   ],
   "license": "MIT",
   "dependencies": {
@@ -54,9 +58,11 @@
     "ts-jest": "^25.4.0",
     "ts-node": "^8.9.1",
     "tslint": "^6.1.0",
+    "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.8.3"
   },
   "jest": {
+    "testEnvironment": "node",
     "transform": {
       "^.+\\.(t|j)sx?$": "ts-jest"
     },

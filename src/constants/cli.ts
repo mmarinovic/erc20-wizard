@@ -1,4 +1,5 @@
 import colors from 'colors/safe';
+import { errorMessageTemplate } from '../helpers';
 
 const cliPromptOptions = [
   {
@@ -40,13 +41,11 @@ const cliOptions = {
   string: ['config', 'network'],
 };
 
-const errorMessageTemplate = (message: string) => colors.red(`❌ ${message}`);
-
 const cliMessages = {
-  welcome: '🏭  Welcome to Ethereum ERC20 token factory! 🏭',
+  welcome: '🧙  Welcome to Ethereum ERC20 token wizard! 🧙',
   help: `
   --help                            Print help
-  --config=infuraProjectId          Configure factory to use 'infuraProjectId' when connecting to infura API. Get it at https://infura.io/.
+  --config=infuraProjectId          Configure wizard to use 'infuraProjectId' when connecting to infura API. Get it at https://infura.io/.
   --main                            Start contract creation for Ethereum main network
   --rinkeby                         Start contract creation for Ethereum rinkeby testnet
   --ropsten                         Start contract creation for Ethereum ropsten testnet
