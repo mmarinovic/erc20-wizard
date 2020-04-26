@@ -1,5 +1,5 @@
 # Ethereum ERC 20 Token Factory
-Create and deploy new ERC20 tokens on Ethereum network.
+CLI for creating and deploying new ERC20 tokens on Ethereum network.
 
 ## Install
 ```
