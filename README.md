@@ -1,4 +1,4 @@
-# Ethereum ERC 20 Wizard
+# 🧙 Ethereum ERC 20 Wizard 🧙
 Create and deploy new ERC20 tokens on Ethereum network.
 
 ## Install
