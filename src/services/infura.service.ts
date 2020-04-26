@@ -30,7 +30,7 @@ export class InfuraService implements IEthereumProviderService {
       case 'ropsten':
         return 'https://ropsten.infura.io/v3';
       default:
-        throw 'Network not supported';
+        throw new Error('Network is not supported');
     }
   }
 }

@@ -1,22 +1,27 @@
-import config from '../config.json';
+import Configstore from 'configstore';
 import { IConfiguration } from '../interfaces/configuration';
+import { configKeys } from '../constants/config';
 
 export class ConfigurationService {
+  private configStore: Configstore;
+
   constructor() {
-    this.validateConfig();
+    this.configStore = new Configstore(configKeys.configProjectName);
   }
 
-  get(): IConfiguration {
+  get = (): IConfiguration => {
     return {
       infura: {
-        projectId: config.infura.projectId,
+        projectId: this.configStore.get(configKeys.infuraProjectId),
       },
     };
-  }
+  };
 
-  private validateConfig() {
-    if (!config.infura?.projectId) {
-      throw new Error('Infura project id is required');
-    }
-  }
+  set = (infuraProjectId: string) => {
+    this.configStore.set(configKeys.infuraProjectId, infuraProjectId);
+  };
+
+  clear = () => {
+    this.configStore.clear();
+  };
 }

@@ -1,13 +1,36 @@
 # Ethereum ERC 20 Token Factory
-Create and deploy new tokens on Ethereum network. Make sure you have some funds in your ethereum wallet since deploying a contract costs ether.
+Create and deploy new ERC20 tokens on Ethereum network.
+
+## Install
+```
+$ npm install -g eth-erc20-token-factory
+```
 
 ## Configuration
-Infura requires a project ID to access the network. I added my ID to the `./config.json`, but requests are limited. Change that to fit your needs.
+First go and get your infura project id at https://infura.io/.
+```
+$ eth-erc20-token-factory --config=yourInfuraProjectId
+```
 
-## Steps:
-1. Run `yarn deploy:rinkeby`, `yarn deploy:ropsten` or `yarn deploy:main`
-2. Insert your private key. It will be used to unlock account which will be a token owner.
-3. Insert information about your token
+## Usage
+Deploying to `main` net:
+```
+$ eth-erc20-token-factory --main
+```
+
+Deploying to `ropsten` testnet:
+```
+$ eth-erc20-token-factory --ropsten
+```
+
+Deploying to `rinkeby` testnet:
+```
+$ eth-erc20-token-factory --rinkeby
+```
+
+You will be asked to provide informations about ERC20 token:
+1. Private key which will be used to sign the transaction. *Private key is not stored in the process*. Make sure you have some funds on your account since deploying a token costs ether.
+2. Token information like name, symbol, decimal places and total supply
 
 ```javascript
 prompt: Please enter your private key. This will be used to sign contract transaction.:
