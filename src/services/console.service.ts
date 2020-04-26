@@ -1,45 +1,12 @@
 import prompt from 'prompt';
-import colors from 'colors/safe';
+import minimist from 'minimist';
+import { cliPromptOptions, cliOptions } from '../constants/cli';
 import { Spinner } from 'cli-spinner';
 import { IPromptResult } from '../interfaces/prompt-result';
+import { ICliArgs } from '../interfaces/cli-args';
 
 export class ConsoleService {
   spinner: Spinner;
-
-  promptItems = [
-    {
-      description: colors.magenta(
-        'Please enter your private key. This will be used to sign contract transaction.'
-      ),
-      name: 'privateKey',
-      required: true,
-      hidden: true,
-    },
-    {
-      description: 'Token name',
-      name: 'tokenName',
-      pattern: /^[a-zA-Z ]+$/,
-      required: true,
-    },
-    {
-      description: 'Token symbol',
-      name: 'tokenSymbol',
-      pattern: /^[a-zA-Z]+$/,
-      required: true,
-    },
-    {
-      description: 'Token decimal places',
-      name: 'tokenDecimals',
-      pattern: /^[0-9]+$/,
-      required: true,
-    },
-    {
-      description: 'Token total supply',
-      name: 'tokenTotalSupply',
-      pattern: /^[0-9]+$/,
-      required: true,
-    },
-  ];
 
   constructor() {
     this.spinner = new Spinner();
@@ -49,7 +16,7 @@ export class ConsoleService {
     this.spinner = new Spinner();
 
     prompt.start();
-    prompt.get(this.promptItems, (_, result: IPromptResult) => {
+    prompt.get(cliPromptOptions, (_, result: IPromptResult) => {
       callback(result);
     });
   }
@@ -61,5 +28,9 @@ export class ConsoleService {
 
   stopSpinner() {
     this.spinner && this.spinner.stop(true);
+  }
+
+  getArgs(processArgs: string[]): ICliArgs {
+    return minimist(processArgs.slice(2), cliOptions) as any;
   }
 }

@@ -62,3 +62,4 @@ typings/
 
 node_modules
 dist
+lib
