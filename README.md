@@ -38,6 +38,5 @@ prompt: Token name:  MyAwesomeToken
 prompt: Token symbol:  MAT
 prompt: Token decimal places:  18
 prompt: Token total supply:  100000000
-Deploying contract to rinkeby from account 0xb33fbA424A6dc8479E76e0f539615Bf85dC52840
-Contract deployed to:  0xE079B5727Bc87E3E0727c79cfaA99fD31159FEE0
+✅ MyAwesomeToken successfuly deployed from 0x0Dca93a693b9695B9fFf96E3c60d062B6F152250 to 0xD565eDF2319B6F6c0d1c32Dce532AAd1Bf2C0F99
 ```
