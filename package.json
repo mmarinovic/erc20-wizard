@@ -23,7 +23,8 @@
     "contract",
     "tool",
     "cli",
-    "infura"
+    "infura",
+    "ico"
   ],
   "license": "MIT",
   "dependencies": {
