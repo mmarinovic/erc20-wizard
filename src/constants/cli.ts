@@ -40,6 +40,8 @@ const cliOptions = {
   string: ['config', 'network'],
 };
 
+const errorMessageTemplate = (message: string) => colors.red(`❌ ${message}`);
+
 const cliMessages = {
   welcome: '🏭  Welcome to Ethereum ERC20 token factory! 🏭',
   help: `
@@ -49,17 +51,21 @@ const cliMessages = {
   --rinkeby                         Start contract creation for Ethereum rinkeby testnet
   --ropsten                         Start contract creation for Ethereum ropsten testnet
   `,
-  configureSuccess: '🚀 Sucessfully configured 🚀',
-  invalidProjectId: '❌ Invalid Infura project id ❌',
-  notConfigured:
-    '❌ CLI is not configured yet. Use --config to setup your infura project id ❌',
-  invalidNetwork:
-    '❌ Invalid Ethereum network. Allowed values are main, rinkeby and ropsten ❌',
+  configureSuccess: '🚀 Sucessfully configured',
+  invalidProjectId: errorMessageTemplate('Invalid Infura project id'),
+  notConfigured: errorMessageTemplate(
+    'CLI is not configured yet. Use --config to setup your infura project id'
+  ),
+  invalidNetwork: errorMessageTemplate(
+    'Invalid Ethereum network. Allowed values are main, rinkeby and ropsten'
+  ),
   deploying: '🔥 Deploying 🔥',
   configDisplay: (projecId: string) =>
     `⚙️ Configured project Id is '${projecId || 'none'}'`,
   deploymentError: (tokenName: string, account: string, error: string) =>
-    colors.red(`❌ Error deploying ${tokenName} from ${account}. ${error}`),
+    errorMessageTemplate(
+      `Error deploying ${tokenName} from ${account}. ${error}`
+    ),
   deploymentSuccess: (
     tokenName: string,
     account: string,
@@ -70,4 +76,4 @@ const cliMessages = {
     ),
 };
 
-export { cliPromptOptions, cliOptions, cliMessages };
+export { cliPromptOptions, cliOptions, cliMessages, errorMessageTemplate };

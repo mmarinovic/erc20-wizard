@@ -2,8 +2,11 @@
 
 exports[`cli cliMessages matches a snapshot 1`] = `
 Object {
-  "configureSuccess": "🚀 Sucessfully configured 🚀",
+  "configDisplay": [Function],
+  "configureSuccess": "🚀 Sucessfully configured",
   "deploying": "🔥 Deploying 🔥",
+  "deploymentError": [Function],
+  "deploymentSuccess": [Function],
   "help": "
   --help                            Print help
   --config=infuraProjectId          Configure factory to use 'infuraProjectId' when connecting to infura API
@@ -11,9 +14,9 @@ Object {
   --rinkeby                         Start contract creation for Ethereum rinkeby testnet
   --ropsten                         Start contract creation for Ethereum ropsten testnet
   ",
-  "invalidNetwork": "❌ Invalid Ethereum network. Allowed values are main, rinkeby and ropsten ❌",
-  "invalidProjectId": "❌ Invalid Infura project id ❌",
-  "notConfigured": "❌ CLI is not configured yet. Use --config to setup your infura project id ❌",
+  "invalidNetwork": "[31m❌ Invalid Ethereum network. Allowed values are main, rinkeby and ropsten[39m",
+  "invalidProjectId": "[31m❌ Invalid Infura project id[39m",
+  "notConfigured": "[31m❌ CLI is not configured yet. Use --config to setup your infura project id[39m",
   "welcome": "🏭  Welcome to Ethereum ERC20 token factory! 🏭",
 }
 `;

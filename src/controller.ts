@@ -1,4 +1,3 @@
-import colors from 'colors/safe';
 import { ContractDeploymentService } from './services/contract-deployment.service';
 import { ContractTemplateService } from './services/contract-template.service';
 import { ConfigurationService } from './services/configuration.service';
@@ -7,7 +6,7 @@ import { IPromptResult } from './interfaces/prompt-result';
 import { IContractDeploymentResult } from './interfaces/contract-deployment';
 import { IEthereumProviderService } from './interfaces/ethereum-provider.service';
 import { EthereumNetworkType } from './types/ethereum-network';
-import { cliMessages } from './constants/cli';
+import { cliMessages, errorMessageTemplate } from './constants/cli';
 import { ICliArgs } from './interfaces/cli-args';
 
 export class Controller {
@@ -90,7 +89,7 @@ export class Controller {
 
         this.handleResult(tokenName, result);
       } catch (error) {
-        console.error(error.message);
+        console.error(errorMessageTemplate(error.message));
         process.exit(1);
       }
     };
@@ -131,7 +130,7 @@ export class Controller {
   private validateConfiguration() {
     const config = this.configurationService.get();
     if (!config.infura.projectId) {
-      console.error(colors.red(cliMessages.notConfigured));
+      console.error(cliMessages.notConfigured);
       process.exit(1);
     }
   }
