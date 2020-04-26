@@ -1,31 +1,31 @@
-# Ethereum ERC 20 Token Factory
+# Ethereum ERC 20 Wizard
 Create and deploy new ERC20 tokens on Ethereum network.
 
 ## Install
 ```
-$ npm install -g eth-erc20-token-factory
+$ npm install -g erc20-wizard
 ```
 
 ## Configuration
 First go and get your infura project id at https://infura.io/.
 ```
-$ eth-erc20-token-factory --config=yourInfuraProjectId
+$ erc20-wizard --config=yourInfuraProjectId
 ```
 
 ## Usage
 Deploying to `main` net:
 ```
-$ eth-erc20-token-factory --main
+$ erc20-wizard --main
 ```
 
 Deploying to `ropsten` testnet:
 ```
-$ eth-erc20-token-factory --ropsten
+$ erc20-wizardy --ropsten
 ```
 
 Deploying to `rinkeby` testnet:
 ```
-$ eth-erc20-token-factory --rinkeby
+$ erc20-wizard --rinkeby
 ```
 
 You will be asked to provide informations about ERC20 token:
