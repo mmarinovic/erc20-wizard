@@ -1,14 +1,14 @@
 {
   "name": "erc20-wizard",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "CLI for creating and deploying new ERC20 tokens on Ethereum network.",
   "main": "lib/index.js",
   "bin": {
-    "erc20-wizard": "lib/cli.js"
+    "erc20-wizard": "lib/index.js"
   },
   "scripts": {
     "build": "gulp",
-    "start": "ts-node ./src/cli.ts",
+    "start": "ts-node ./src/index.ts",
     "test": "jest",
     "lint": "tslint --project tsconfig.json",
     "preuninstall": "node lib/scripts/pre-uninstall.js",

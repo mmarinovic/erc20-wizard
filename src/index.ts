@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import { Controller } from './controller';
 import { ConsoleService } from './services/console.service';
 import { InfuraService } from './services/infura.service';
@@ -15,5 +17,4 @@ const controller = new Controller(
   contractTemplateService,
   configurationSerice
 );
-
 controller.init();
