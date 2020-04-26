@@ -3,7 +3,7 @@
 <img alt="npm version" src="https://img.shields.io/npm/v/erc20-wizard.svg">
 <img alt="NPM" src="https://img.shields.io/npm/l/erc20-wizard.svg">
 </p>
-CLI for creating and deploying new ERC20 tokens on Ethereum network.
+CLI for creating and deploying ERC20 tokens on Ethereum network.
 
 ## Install
 ```
