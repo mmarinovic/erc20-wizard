@@ -5,10 +5,14 @@ import { ContractTemplateService } from './services/contract-template.service';
 import { ConfigurationService } from './services/configuration.service';
 
 const configurationSerice = new ConfigurationService();
+const consoleService = new ConsoleService();
+const infuraService = new InfuraService(configurationSerice);
+const contractTemplateService = new ContractTemplateService();
+
 const controller = new Controller(
-  new ConsoleService(),
-  new InfuraService(configurationSerice),
-  new ContractTemplateService(),
+  consoleService,
+  infuraService,
+  contractTemplateService,
   configurationSerice
 );
 

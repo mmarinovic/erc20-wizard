@@ -1,6 +1,6 @@
 {
   "name": "erc20-wizard",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "CLI for creating and deploying new ERC20 tokens on Ethereum network.",
   "main": "lib/index.js",
   "bin": {
@@ -11,7 +11,8 @@
     "start": "ts-node ./src/cli.ts",
     "test": "jest",
     "lint": "tslint --project tsconfig.json",
-    "preuninstall": "node lib/scripts/pre-uninstall.js"
+    "preuninstall": "node lib/scripts/pre-uninstall.js",
+    "prepublish": "gulp"
   },
   "author": {
     "name": "Marko Marinovic",
