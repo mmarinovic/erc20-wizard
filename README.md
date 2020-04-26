@@ -29,7 +29,7 @@ $ eth-erc20-token-factory --rinkeby
 ```
 
 You will be asked to provide informations about ERC20 token:
-1. Private key which will be used to sign the transaction. Private key is not stored in the process. Make sure you have some funds on your account since deploying a token costs ether.
+1. Private key which will be used to sign the transaction. *Private key is not stored in the process*. Make sure you have some funds on your account since deploying a token costs ether.
 2. Token information like name, symbol, decimal places and total supply
 
 ```javascript
