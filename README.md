@@ -20,7 +20,7 @@ $ eth-erc20-token-factory --main
 
 Deploying to `ropsten` testnet:
 ```
-$ eth-erc20-token-factory --main
+$ eth-erc20-token-factory --ropsten
 ```
 
 Deploying to `rinkeby` testnet:
