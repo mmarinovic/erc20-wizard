@@ -13,17 +13,17 @@ $ eth-erc20-token-factory --config=yourInfuraProjectId
 ```
 
 ## Usage
-Deploying to `main` net:
+Deploy to `main` net:
 ```
 $ eth-erc20-token-factory --main
 ```
 
-Deploying to `ropsten` testnet:
+Deploy to `ropsten` testnet:
 ```
 $ eth-erc20-token-factory --ropsten
 ```
 
-Deploying to `rinkeby` testnet:
+Deploy to `rinkeby` testnet:
 ```
 $ eth-erc20-token-factory --rinkeby
 ```
