@@ -9,14 +9,13 @@ Object {
   "deploymentSuccess": [Function],
   "help": "
   --help                            Print help
-  --config=infuraProjectId          Configure factory to use 'infuraProjectId' when connecting to infura API
-  --main                            Start contract creation for Ethereum main network rinkeby and ropsten
+  --config=infuraProjectId          Configure factory to use 'infuraProjectId' when connecting to infura API. Get it at https://infura.io/.
+  --main                            Start contract creation for Ethereum main network
   --rinkeby                         Start contract creation for Ethereum rinkeby testnet
   --ropsten                         Start contract creation for Ethereum ropsten testnet
   ",
-  "invalidNetwork": "[31m❌ Invalid Ethereum network. Allowed values are main, rinkeby and ropsten[39m",
   "invalidProjectId": "[31m❌ Invalid Infura project id[39m",
-  "notConfigured": "[31m❌ CLI is not configured yet. Use --config to setup your infura project id[39m",
+  "notConfigured": "[31m❌ CLI is not configured yet. Use --config to setup your infura project id. Get your project id at https://infura.io/[39m",
   "welcome": "🏭  Welcome to Ethereum ERC20 token factory! 🏭",
 }
 `;
