@@ -17,26 +17,26 @@ $ erc20-wizard --config=yourInfuraProjectId
 ```
 
 ## Usage
-Deploying to `main` net:
+Deploy to `main` net:
 ```
 $ erc20-wizard --main
 ```
 
-Deploying to `ropsten` testnet:
+Deploy to `ropsten` testnet:
 ```
 $ erc20-wizard --ropsten
 ```
 
-Deploying to `rinkeby` testnet:
+Deploy to `rinkeby` testnet:
 ```
 $ erc20-wizard --rinkeby
 ```
 
 You will be asked to provide informations about ERC20 token:
-1. Private key which will be used to sign the transaction. *Private key is not stored in the process*. Make sure you have some funds on your account since deploying a token costs ether.
+1. Private key which will be used to sign the transaction. **Private key is not stored in the process**. Make sure you have some funds on your account since deploying a token costs ether.
 2. Token information like name, symbol, decimal places and total supply
 
-```javascript
+```
 prompt: Please enter your private key. This will be used to sign contract transaction.:
 prompt: Token name:  MyAwesomeToken
 prompt: Token symbol:  MAT
