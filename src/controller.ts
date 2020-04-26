@@ -19,6 +19,7 @@ export class Controller {
 
   init() {
     console.log(cliMessages.welcome);
+    console.log('');
 
     const args = this.consoleService.getArgs(process.argv);
     const network = this.tryGetNetwork(args);
@@ -45,6 +46,7 @@ export class Controller {
   private configure(infuraProjectId: string) {
     if (!infuraProjectId) {
       console.error(cliMessages.invalidProjectId);
+      console.log(cliMessages.help);
       process.exit(1);
     }
 

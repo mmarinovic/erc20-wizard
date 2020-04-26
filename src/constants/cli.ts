@@ -46,22 +46,21 @@ const cliMessages = {
   welcome: '🏭  Welcome to Ethereum ERC20 token factory! 🏭',
   help: `
   --help                            Print help
-  --config=infuraProjectId          Configure factory to use 'infuraProjectId' when connecting to infura API
-  --main                            Start contract creation for Ethereum main network rinkeby and ropsten
+  --config=infuraProjectId          Configure factory to use 'infuraProjectId' when connecting to infura API. Get it at https://infura.io/.
+  --main                            Start contract creation for Ethereum main network
   --rinkeby                         Start contract creation for Ethereum rinkeby testnet
   --ropsten                         Start contract creation for Ethereum ropsten testnet
   `,
   configureSuccess: '🚀 Sucessfully configured',
   invalidProjectId: errorMessageTemplate('Invalid Infura project id'),
   notConfigured: errorMessageTemplate(
-    'CLI is not configured yet. Use --config to setup your infura project id'
-  ),
-  invalidNetwork: errorMessageTemplate(
-    'Invalid Ethereum network. Allowed values are main, rinkeby and ropsten'
+    'CLI is not configured yet. Use --config to setup your infura project id. Get your project id at https://infura.io/'
   ),
   deploying: '🔥 Deploying 🔥',
   configDisplay: (projecId: string) =>
-    `⚙️ Configured project Id is '${projecId || 'none'}'`,
+    `⚙️ Configured project Id is '${
+      projecId || 'none'
+    }'. To change project Id use --config=yourProjectId`,
   deploymentError: (tokenName: string, account: string, error: string) =>
     errorMessageTemplate(
       `Error deploying ${tokenName} from ${account}. ${error}`
