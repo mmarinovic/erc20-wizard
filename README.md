@@ -20,7 +20,7 @@ $ erc20-wizard --main
 
 Deploying to `ropsten` testnet:
 ```
-$ erc20-wizardy --ropsten
+$ erc20-wizard --ropsten
 ```
 
 Deploying to `rinkeby` testnet:
