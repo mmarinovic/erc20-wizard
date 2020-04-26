@@ -26,7 +26,7 @@ export class Controller {
     if (network) {
       this.startDeployment(network);
     } else if (args.config !== undefined) {
-      args.config == '' ? this.showConfig() : this.configure(args.config);
+      args.config === '' ? this.showConfig() : this.configure(args.config);
     } else {
       this.showHelp();
     }

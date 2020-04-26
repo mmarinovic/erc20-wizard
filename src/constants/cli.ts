@@ -42,7 +42,7 @@ const cliOptions = {
 };
 
 const cliMessages = {
-  welcome: '🏭  Welcome to Ethereum ERC20 token wizard! 🏭',
+  welcome: '🧙  Welcome to Ethereum ERC20 token wizard! 🧙',
   help: `
   --help                            Print help
   --config=infuraProjectId          Configure wizard to use 'infuraProjectId' when connecting to infura API. Get it at https://infura.io/.
@@ -74,5 +74,4 @@ const cliMessages = {
     ),
 };
 
-export { cliPromptOptions, cliOptions, cliMessages, errorMessageTemplate };
 export { cliPromptOptions, cliOptions, cliMessages, errorMessageTemplate };

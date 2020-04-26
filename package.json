@@ -10,7 +10,7 @@
     "build": "gulp",
     "start": "ts-node ./src/cli.ts",
     "test": "jest",
-    "lint": "tslint",
+    "lint": "tslint --project tsconfig.json",
     "preuninstall": "node lib/scripts/pre-uninstall.js"
   },
   "author": {
@@ -58,9 +58,11 @@
     "ts-jest": "^25.4.0",
     "ts-node": "^8.9.1",
     "tslint": "^6.1.0",
+    "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.8.3"
   },
   "jest": {
+    "testEnvironment": "node",
     "transform": {
       "^.+\\.(t|j)sx?$": "ts-jest"
     },
