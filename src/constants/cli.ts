@@ -58,7 +58,7 @@ const cliMessages = {
   ),
   deploying: '🔥 Deploying 🔥',
   configDisplay: (projecId: string) =>
-    `⚙️ Configured project Id is '${
+    `⚙️  Configured project Id is '${
       projecId || 'none'
     }'. To change project Id use --config=yourProjectId`,
   deploymentError: (tokenName: string, account: string, error: string) =>
