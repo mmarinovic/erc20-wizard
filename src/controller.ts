@@ -18,9 +18,6 @@ export class Controller {
   ) {}
 
   init() {
-    console.log(cliMessages.welcome);
-    console.log('');
-
     const args = this.consoleService.getArgs(process.argv);
     const network = this.tryGetNetwork(args);
     if (network) {
@@ -33,6 +30,8 @@ export class Controller {
   }
 
   private showHelp() {
+    console.log(cliMessages.welcome);
+    console.log('');
     console.log(cliMessages.help);
     process.exit();
   }

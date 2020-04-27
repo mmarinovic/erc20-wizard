@@ -1,7 +1,7 @@
 {
   "name": "erc20-wizard",
-  "version": "1.0.5",
-  "description": "CLI for creating and deploying new ERC20 tokens on Ethereum network.",
+  "version": "1.0.6",
+  "description": "CLI for creating and deploying ERC20 tokens on Ethereum network.",
   "main": "lib/index.js",
   "bin": {
     "erc20-wizard": "lib/index.js"

@@ -44,7 +44,8 @@ const cliOptions = {
 const cliMessages = {
   welcome: '🧙  Welcome to Ethereum ERC20 token wizard! 🧙',
   help: `
-  --help                            Print help
+  --help                            List commands
+  --config                          Show configured infuraProjectId
   --config=infuraProjectId          Configure wizard to use 'infuraProjectId' when connecting to infura API. Get it at https://infura.io/.
   --main                            Start contract creation for Ethereum main network
   --rinkeby                         Start contract creation for Ethereum rinkeby testnet
